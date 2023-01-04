@@ -1,6 +1,7 @@
 #header {
   display: flex;
   justify-content: space-evenly;
+  align-items: baseline;
   border: 1px black solid;
   padding-bottom: 20px;
 }
@@ -48,8 +49,10 @@
 }
 
 .inputText {
-  width: 50px;
-  height: 50px;
+  border: 1px black solid;
+  border-radius: 10px;
+  width: 75px;
+  height: 75px;
   text-size-adjust: 10px;
   text-align: center;
   text-transform: uppercase;
@@ -57,38 +60,110 @@
   background-color: white;
 }
 
-#confirma {
+.confirmaClass {
   margin-left: 10px;
   height: 50px;
   width: 50px;
 }
 
-#confirma2 {
-  margin-left: 10px;
-  height: 50px;
+.exemplo {
+  border: 1px solid rgb(0, 0, 0);
   width: 50px;
+  height: 50px;
+  text-align: center;
 }
 
-#confirma3 {
-  margin-left: 10px;
-  height: 50px;
-  width: 50px;
+#exemplo1 {
+  display: flex;
 }
 
-#confirma4 {
-  margin-left: 10px;
-  height: 50px;
+#letraCerta {
+  border: 1px solid rgb(0, 0, 0);
   width: 50px;
+  height: 50px;
+  background-color: green;
 }
 
-#confirma5 {
-  margin-left: 10px;
-  height: 50px;
+#letraCerta2 {
+  border: 1px solid rgb(0, 0, 0);
   width: 50px;
+  height: 50px;
+  background-color: red;
 }
 
-#confirma6 {
+#comoJogar {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+#buttonReset {
   margin-left: 10px;
   height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#info {
+  margin-left: 10px;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#fechaMenu {
+  margin-left: 10px;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#testee {
+  display: flex;
+  justify-content: center;
+}
+
+#teclado {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linhaTeclado {
+  display: flex;
+}
+
+.tecla {
+  border: 1px black solid;
   width: 50px;
+  height: 50px;
+  margin: 3PX;
+}
+
+.oi {
+  border: 5px black solid;
+}
+
+#enter2 {
+  display: none;
+}
+
+#enter3 {
+  display: none;
+}
+
+#enter4 {
+  display: none;
+}
+
+#enter5 {
+  display: none;
+}
+
+#enter6 {
+  display: none;
 }

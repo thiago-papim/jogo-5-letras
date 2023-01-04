@@ -1,4 +1,35 @@
 const palavra = 'termo';
+const comoJogar = document.getElementById('info');
+const mostrarInfo = document.getElementById('comoJogar');
+const fechamenu = document.getElementById('fechaMenu');
+const reset = document.getElementById('buttonReset');
+
+const enter = document.getElementById('enter');
+const enter2 = document.getElementById('enter2');
+const enter3 = document.getElementById('enter3');
+const enter4 = document.getElementById('enter4');
+const enter5 = document.getElementById('enter5');
+const enter6 = document.getElementById('enter6');
+
+const teclaQ = document.getElementById('teclaQ');
+
+reset.addEventListener('click', function () {
+  window.location.reload(true);
+})
+
+comoJogar.addEventListener('click', function () {
+  if (mostrarInfo.style.display = 'none') {
+    mostrarInfo.style.display = 'flex';
+
+  }
+})
+
+fechamenu.addEventListener('click', function () {
+  if (mostrarInfo.style.display = 'block') {
+    mostrarInfo.style.display = 'none';
+    comoJogar.style.display = 'block'
+  }
+})
 
 const t1 = document.getElementById('t1');
 const t2 = document.getElementById('t2');
@@ -36,25 +67,17 @@ const t28 = document.getElementById('t28');
 const t29 = document.getElementById('t29');
 const t30 = document.getElementById('t30');
 
-const botaoTeste = document.getElementById('confirma');
-const botaoTeste2 = document.getElementById('confirma2');
-const botaoTeste3 = document.getElementById('confirma3');
-const botaoTeste4 = document.getElementById('confirma4');
-const botaoTeste5 = document.getElementById('confirma5');
-const botaoTeste6 = document.getElementById('confirma6');
-
 const linha1 = () => {
   const letrasRestantes = [];
   const listaInput = [t1, t2, t3, t4, t5];
-  const confirmaPalavra = `${t1.value}${t2.value}${t3.value}${t4.value}${t5.value}`;
+  const confirmaPalavra = `${t1.innerText}${t2.innerText}${t3.innerText}${t4.innerText}${t5.innerText}`;
   if (confirmaPalavra.length === 5) {
     for (let index = 0; index < palavra.length; index += 1) {
-      if (palavra[index] === listaInput[index].value) {
+      if (palavra[index] === listaInput[index].innerHTML) {
         listaInput[index].style.backgroundColor = 'green';
       } else {
         letrasRestantes.push(palavra[index])
       }
-      listaInput[index].disabled = true;
     }
   }
   return letrasRestantes;
@@ -65,7 +88,7 @@ const linha1_1 = () => {
   const inputFaltando = [t1, t2, t3, t4, t5].filter((element) => element.style.backgroundColor !== 'green');
   for (let index = 0; index < inputFaltando.length; index += 1) {
     for (let i = 0; i < letrasRestantes.length; i += 1) {
-      if (inputFaltando[index].value === letrasRestantes[i]) {
+      if (inputFaltando[index].innerHTML === letrasRestantes[i]) {
         inputFaltando[index].style.backgroundColor = 'red';
         letrasRestantes.splice(i, 1);
       }
@@ -76,10 +99,10 @@ const linha1_1 = () => {
 const linha2 = () => {
   const letrasRestantes = [];
   const listaInput = [t6, t7, t8, t9, t10];
-  const confirmaPalavra = `${t6.value}${t7.value}${t8.value}${t9.value}${t10.value}`;
+  const confirmaPalavra = `${t6.innerText}${t7.innerText}${t8.innerText}${t9.innerText}${t10.innerText}`;
   if (confirmaPalavra.length === 5) {
     for (let index = 0; index < palavra.length; index += 1) {
-      if (palavra[index] === listaInput[index].value) {
+      if (palavra[index] === listaInput[index].innerHTML) {
         listaInput[index].style.backgroundColor = 'green';
       } else {
         letrasRestantes.push(palavra[index])
@@ -95,7 +118,7 @@ const linha2_1 = () => {
   const inputFaltando = [t6, t7, t8, t9, t10].filter((element) => element.style.backgroundColor !== 'green');
   for (let index = 0; index < inputFaltando.length; index += 1) {
     for (let i = 0; i < letrasRestantes.length; i += 1) {
-      if (inputFaltando[index].value === letrasRestantes[i]) {
+      if (inputFaltando[index].innerHTML === letrasRestantes[i]) {
         inputFaltando[index].style.backgroundColor = 'red';
         letrasRestantes.splice(i, 1);
       }
@@ -106,10 +129,10 @@ const linha2_1 = () => {
 const linha3 = () => {
   const letrasRestantes = [];
   const listaInput = [t11, t12, t13, t14, t15];
-  const confirmaPalavra = `${t11.value}${t12.value}${t13.value}${t14.value}${t15.value}`;
+  const confirmaPalavra = `${t11.innerText}${t12.innerText}${t13.innerText}${t14.innerText}${t15.innerText}`;
   if (confirmaPalavra.length === 5) {
     for (let index = 0; index < palavra.length; index += 1) {
-      if (palavra[index] === listaInput[index].value) {
+      if (palavra[index] === listaInput[index].innerHTML) {
         listaInput[index].style.backgroundColor = 'green';
       } else {
         letrasRestantes.push(palavra[index])
@@ -125,7 +148,7 @@ const linha3_1 = () => {
   const inputFaltando = [t11, t12, t13, t14, t15].filter((element) => element.style.backgroundColor !== 'green');
   for (let index = 0; index < inputFaltando.length; index += 1) {
     for (let i = 0; i < letrasRestantes.length; i += 1) {
-      if (inputFaltando[index].value === letrasRestantes[i]) {
+      if (inputFaltando[index].innerHTML === letrasRestantes[i]) {
         inputFaltando[index].style.backgroundColor = 'red';
         letrasRestantes.splice(i, 1);
       }
@@ -136,10 +159,10 @@ const linha3_1 = () => {
 const linha4 = () => {
   const letrasRestantes = [];
   const listaInput = [t16, t17, t18, t19, t20];
-  const confirmaPalavra = `${t16.value}${t17.value}${t18.value}${t19.value}${t20.value}`;
+  const confirmaPalavra = `${t16.innerText}${t17.innerText}${t18.innerText}${t19.innerText}${t20.innerText}`;
   if (confirmaPalavra.length === 5) {
     for (let index = 0; index < palavra.length; index += 1) {
-      if (palavra[index] === listaInput[index].value) {
+      if (palavra[index] === listaInput[index].innerHTML) {
         listaInput[index].style.backgroundColor = 'green';
       } else {
         letrasRestantes.push(palavra[index])
@@ -155,7 +178,7 @@ const linha4_1 = () => {
   const inputFaltando = [t16, t17, t18, t19, t20].filter((element) => element.style.backgroundColor !== 'green');
   for (let index = 0; index < inputFaltando.length; index += 1) {
     for (let i = 0; i < letrasRestantes.length; i += 1) {
-      if (inputFaltando[index].value === letrasRestantes[i]) {
+      if (inputFaltando[index].innerHTML === letrasRestantes[i]) {
         inputFaltando[index].style.backgroundColor = 'red';
         letrasRestantes.splice(i, 1);
       }
@@ -166,10 +189,10 @@ const linha4_1 = () => {
 const linha5 = () => {
   const letrasRestantes = [];
   const listaInput = [t21, t22, t23, t24, t25];
-  const confirmaPalavra = `${t21.value}${t22.value}${t23.value}${t24.value}${t25.value}`;
+  const confirmaPalavra = `${t21.innerText}${t22.innerText}${t23.innerText}${t24.innerText}${t25.innerText}`;
   if (confirmaPalavra.length === 5) {
     for (let index = 0; index < palavra.length; index += 1) {
-      if (palavra[index] === listaInput[index].value) {
+      if (palavra[index] === listaInput[index].innerHTML) {
         listaInput[index].style.backgroundColor = 'green';
       } else {
         letrasRestantes.push(palavra[index])
@@ -185,7 +208,7 @@ const linha5_1 = () => {
   const inputFaltando = [t21, t22, t23, t24, t25].filter((element) => element.style.backgroundColor !== 'green');
   for (let index = 0; index < inputFaltando.length; index += 1) {
     for (let i = 0; i < letrasRestantes.length; i += 1) {
-      if (inputFaltando[index].value === letrasRestantes[i]) {
+      if (inputFaltando[index].innerHTML === letrasRestantes[i]) {
         inputFaltando[index].style.backgroundColor = 'red';
         letrasRestantes.splice(i, 1);
       }
@@ -196,10 +219,10 @@ const linha5_1 = () => {
 const linha6 = () => {
   const letrasRestantes = [];
   const listaInput = [t26, t27, t28, t29, t30];
-  const confirmaPalavra = `${t26.value}${t27.value}${t28.value}${t29.value}${t30.value}`;
+  const confirmaPalavra = `${t26.innerText}${t27.innerText}${t28.innerText}${t29.innerText}${t30.innerText}`;
   if (confirmaPalavra.length === 5) {
     for (let index = 0; index < palavra.length; index += 1) {
-      if (palavra[index] === listaInput[index].value) {
+      if (palavra[index] === listaInput[index].innerHTML) {
         listaInput[index].style.backgroundColor = 'green';
       } else {
         letrasRestantes.push(palavra[index])
@@ -223,20 +246,125 @@ const linha6_1 = () => {
   }
 }
 
-botaoTeste.addEventListener('click', linha1)
-botaoTeste.addEventListener('click', linha1_1)
+const arrDiv = document.getElementsByClassName('inputText');
 
-botaoTeste2.addEventListener('click', linha2);
-botaoTeste2.addEventListener('click', linha2_1);
+const arr1 = [t1, t2, t3, t4, t5];
+const arr2 = [t6, t7, t8, t9, t10];
+const arr3 = [t11, t12, t13, t14, t15];
+const arr4 = [t16, t17, t18, t19, t20];
+const arr5 = [t21, t22, t23, t24, t25];
+const arr6 = [t26, t27, t28, t29, t30];
 
-botaoTeste3.addEventListener('click', linha3)
-botaoTeste3.addEventListener('click', linha3_1)
+function classeLinha1() {
+  for (let index = 0; index < arrDiv.length; index += 1) {
+    if (arrDiv[index].addEventListener('click', function () {
+      for (let i = 0; i < arrDiv.length; i += 1) {
+        arrDiv[i].classList.remove('oi');
+      }
+      arrDiv[index].classList.add('oi');
+    }));
+  }
+}
 
-botaoTeste4.addEventListener('click', linha4);
-botaoTeste4.addEventListener('click', linha4_1);
+classeLinha1();
 
-botaoTeste5.addEventListener('click', linha5)
-botaoTeste5.addEventListener('click', linha5_1)
+// function teclado() {
+//   teclaQ.addEventListener('click', function() {
+//     for (let index = 0; index < arrDiv.length; index += 1) {
+//       if (arrDiv[index].classList.contains('oi') === true) {
+//         arrDiv[index].innerText = 'q';
+//         arrDiv[1].classList.add('oi');
+//       }
+//     }
+//   })
+// }
 
-botaoTeste6.addEventListener('click', linha6);
-botaoTeste6.addEventListener('click', linha6_1);
+// teclado();
+
+enter.addEventListener('click', function () {
+  const confirmaPalavra = `${t1.innerText}${t2.innerText}${t3.innerText}${t4.innerText}${t5.innerText}`;
+  if (confirmaPalavra.length === 5) {
+    linha1();
+    linha1_1();
+    for (let index = 0; index < arr1.length; index += 1) {
+      arr1[index].disabled = true;
+      arr1[index].classList.remove('oi');
+      arr2[index].disabled = false;
+    }
+    enter.style.display = 'none';
+    enter2.style.display = 'block';
+  }
+})
+
+enter2.addEventListener('click', function () {
+  const confirmaPalavra = `${t6.innerText}${t7.innerText}${t8.innerText}${t9.innerText}${t10.innerText}`;
+  if (confirmaPalavra.length === 5) {
+    linha2();
+    linha2_1();
+    for (let index = 0; index < arr1.length; index += 1) {
+      arr2[index].disabled = true;
+      arr2[index].classList.remove('oi');
+      arr3[index].disabled = false;
+    }
+    enter2.style.display = 'none';
+    enter3.style.display = 'block';
+  }
+});
+
+enter3.addEventListener('click', function () {
+  const confirmaPalavra = `${t11.innerText}${t12.innerText}${t13.innerText}${t14.innerText}${t15.innerText}`;
+  if (confirmaPalavra.length === 5) {
+  linha3();
+  linha3_1();
+  for (let index = 0; index < arr1.length; index += 1) {
+    arr3[index].disabled = true;
+    arr3[index].classList.remove('oi');
+    arr4[index].disabled = false;
+  }
+  enter3.style.display = 'none';
+  enter4.style.display = 'block';
+}
+});
+
+enter4.addEventListener('click', function () {
+  const confirmaPalavra = `${t16.innerText}${t17.innerText}${t18.innerText}${t19.innerText}${t20.innerText}`;
+  if (confirmaPalavra.length === 5) {
+  linha4();
+  linha4_1();
+  for (let index = 0; index < arr1.length; index += 1) {
+    arr4[index].disabled = true;
+    arr4[index].classList.remove('oi');
+    arr5[index].disabled = false;
+  }
+  enter4.style.display = 'none';
+  enter5.style.display = 'block';
+}
+});
+
+enter5.addEventListener('click', function () {
+  const confirmaPalavra = `${t21.innerText}${t22.innerText}${t23.innerText}${t24.innerText}${t25.innerText}`;
+  if (confirmaPalavra.length === 5) {
+  linha5();
+  linha5_1();
+  for (let index = 0; index < arr1.length; index += 1) {
+    arr5[index].disabled = true;
+    arr5[index].classList.remove('oi');
+    arr6[index].disabled = false;
+  }
+  enter5.style.display = 'none';
+  enter6.style.display = 'block';
+}
+});
+
+enter6.addEventListener('click', function () {
+  const confirmaPalavra = `${t26.innerText}${t27.innerText}${t28.innerText}${t29.innerText}${t30.innerText}`;
+  if (confirmaPalavra.length === 5) {
+  linha6();
+  linha6_1();
+  for (let index = 0; index < arr1.length; index += 1) {
+    arr6[index].disabled = true;
+    arr6[index].classList.remove('oi');
+  }
+  enter6.style.display = 'none';
+}
+});
