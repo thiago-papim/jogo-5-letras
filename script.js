@@ -1,4 +1,26 @@
 const palavra = 'termo';
+const comoJogar = document.getElementById('info');
+const mostrarInfo = document.getElementById('comoJogar');
+const fechamenu = document.getElementById('fechaMenu');
+const reset = document.getElementById('buttonReset');
+
+reset.addEventListener('click', function () {
+  window.location.reload(true);
+})
+
+comoJogar.addEventListener('click', function () {
+  if (mostrarInfo.style.display = 'none') {
+    mostrarInfo.style.display = 'block';
+    comoJogar.style.display = 'none';
+  }
+})
+
+fechamenu.addEventListener('click', function () {
+  if (mostrarInfo.style.display = 'block') {
+    mostrarInfo.style.display = 'none';
+    comoJogar.style.display = 'block'
+  }
+})
 
 const t1 = document.getElementById('t1');
 const t2 = document.getElementById('t2');
