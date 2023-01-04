@@ -9,6 +9,18 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <title>5 Letras</title>
+  <script>
+    function mudarFoco (campo, destino) {
+      if (campo.value.length == 1) {
+        destino.focus();
+      }
+    }
+    function backSpace (campo, destino) {
+      if (campo.value.length == 0) {
+        destino.focus();
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -39,55 +51,97 @@
       <button class="btn btn-dark" id="fechaMenu">FECHAR GUIA</button>
     </section>
   <main>
-    <section id="primeiraLinha" class="linha">
-      <input type="text" maxlength="1" class="inputText" id="t1">
-      <input type="text" maxlength="1" class="inputText" id="t2">
-      <input type="text" maxlength="1" class="inputText" id="t3">
-      <input type="text" maxlength="1" class="inputText" id="t4">
-      <input type="text" maxlength="1" class="inputText" id="t5">
-      <button id="confirma">Teste</button>
-    </section>
-    <section id="segundaLinha" class="linha">
-      <input type="text" maxlength="1" class="inputText" id="t6">
-      <input type="text" maxlength="1" class="inputText" id="t7">
-      <input type="text" maxlength="1" class="inputText" id="t8">
-      <input type="text" maxlength="1" class="inputText" id="t9">
-      <input type="text" maxlength="1" class="inputText" id="t10">
-      <button id="confirma2">Teste 2</button>
-    </section>
-    <section id="terceiraLinha" class="linha">
-      <input type="text" maxlength="1" class="inputText" id="t11">
-      <input type="text" maxlength="1" class="inputText" id="t12">
-      <input type="text" maxlength="1" class="inputText" id="t13">
-      <input type="text" maxlength="1" class="inputText" id="t14">
-      <input type="text" maxlength="1" class="inputText" id="t15">
-      <button id="confirma3">Teste 3</button>
-    </section>
-    <section id="quartaLinha" class="linha">
-      <input type="text" maxlength="1" class="inputText" id="t16">
-      <input type="text" maxlength="1" class="inputText" id="t17">
-      <input type="text" maxlength="1" class="inputText" id="t18">
-      <input type="text" maxlength="1" class="inputText" id="t19">
-      <input type="text" maxlength="1" class="inputText" id="t20">
-      <button id="confirma4">Teste 4</button>
-    </section>
-    <section id="quintaLinha" class="linha">
-      <input type="text" maxlength="1" class="inputText" id="t21">
-      <input type="text" maxlength="1" class="inputText" id="t22">
-      <input type="text" maxlength="1" class="inputText" id="t23">
-      <input type="text" maxlength="1" class="inputText" id="t24">
-      <input type="text" maxlength="1" class="inputText" id="t25">
-      <button id="confirma5">Teste 5</button>
-    </section>
-    <section id="sextaLinha" class="linha">
-      <input type="text" maxlength="1" class="inputText" id="t26">
-      <input type="text" maxlength="1" class="inputText" id="t27">
-      <input type="text" maxlength="1" class="inputText" id="t28">
-      <input type="text" maxlength="1" class="inputText" id="t29">
-      <input type="text" maxlength="1" class="inputText" id="t30">
-      <button id="confirma6">Teste 6</button>
+    <section id="testee">
+      <section id="linhas">
+        <section id="primeiraLinha" class="linha">
+          <input type="text" maxlength="1" class="inputText" id="t1" onKeyUp="mudarFoco(this, t2)">
+          <input type="text" maxlength="1" class="inputText" id="t2" onKeyUp="mudarFoco(this, t3), backSpace(this, t1)">
+          <input type="text" maxlength="1" class="inputText" id="t3" onKeyUp="mudarFoco(this, t4), backSpace(this, t2)">
+          <input type="text" maxlength="1" class="inputText" id="t4" onKeyUp="mudarFoco(this, t5), backSpace(this, t3)">
+          <input type="text" maxlength="1" class="inputText" id="t5" onKeyUp="backSpace(this, t4), backSpace(this, t4)">
+        </section>
+        <section id="segundaLinha" class="linha">
+          <input type="text" maxlength="1" class="inputText" id="t6" disabled>
+          <input type="text" maxlength="1" class="inputText" id="t7" disabled>
+          <input type="text" maxlength="1" class="inputText" id="t8" disabled>
+          <input type="text" maxlength="1" class="inputText" id="t9" disabled>
+          <input type="text" maxlength="1" class="inputText" id="t10" disabled>
+        </section>
+        <section id="terceiraLinha" class="linha">
+          <input type="text" maxlength="1" class="inputText" id="t11">
+          <input type="text" maxlength="1" class="inputText" id="t12">
+          <input type="text" maxlength="1" class="inputText" id="t13">
+          <input type="text" maxlength="1" class="inputText" id="t14">
+          <input type="text" maxlength="1" class="inputText" id="t15">
+        </section>
+        <section id="quartaLinha" class="linha">
+          <input type="text" maxlength="1" class="inputText" id="t16">
+          <input type="text" maxlength="1" class="inputText" id="t17">
+          <input type="text" maxlength="1" class="inputText" id="t18">
+          <input type="text" maxlength="1" class="inputText" id="t19">
+          <input type="text" maxlength="1" class="inputText" id="t20">
+        </section>
+        <section id="quintaLinha" class="linha">
+          <input type="text" maxlength="1" class="inputText" id="t21">
+          <input type="text" maxlength="1" class="inputText" id="t22">
+          <input type="text" maxlength="1" class="inputText" id="t23">
+          <input type="text" maxlength="1" class="inputText" id="t24">
+          <input type="text" maxlength="1" class="inputText" id="t25">
+        </section>
+        <section id="sextaLinha" class="linha">
+          <input type="text" maxlength="1" class="inputText" id="t26">
+          <input type="text" maxlength="1" class="inputText" id="t27">
+          <input type="text" maxlength="1" class="inputText" id="t28">
+          <input type="text" maxlength="1" class="inputText" id="t29">
+          <input type="text" maxlength="1" class="inputText" id="t30">
+        </section>
+        <section id="botoes">
+          <button id="confirma" class="confirmaClass">Teste</button>
+          <button id="confirma2" class="confirmaClass">Teste2</button>
+          <button id="confirma3" class="confirmaClass">Teste3</button>
+          <button id="confirma4" class="confirmaClass">Teste4</button>
+          <button id="confirma5" class="confirmaClass">Teste5</button>
+          <button id="confirma6" class="confirmaClass">Teste6</button>
+        </section>
+      </section>
     </section>
   </main>
+  <section id="teclado">
+    <section class="linhaTeclado">
+      <div class="tecla">Q</div>
+      <div class="tecla">W</div>
+      <div class="tecla">E</div>
+      <div class="tecla">R</div>
+      <div class="tecla">T</div>
+      <div class="tecla">Y</div>
+      <div class="tecla">U</div>
+      <div class="tecla">I</div>
+      <div class="tecla">O</div>
+      <div class="tecla">P</div>
+    </section>
+    <section class="linhaTeclado">
+      <div class="tecla">A</div>
+      <div class="tecla">S</div>
+      <div class="tecla">D</div>
+      <div class="tecla">F</div>
+      <div class="tecla">G</div>
+      <div class="tecla">H</div>
+      <div class="tecla">J</div>
+      <div class="tecla">K</div>
+      <div class="tecla">L</div>
+      <div class="tecla"></div>
+    </section>
+    <section class="linhaTeclado">
+      <div class="tecla">Z</div>
+      <div class="tecla">X</div>
+      <div class="tecla">C</div>
+      <div class="tecla">V</div>
+      <div class="tecla">B</div>
+      <div class="tecla">N</div>
+      <div class="tecla">M</div>
+      <div class="tecla"></div>
+    </section>
+  </section>
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

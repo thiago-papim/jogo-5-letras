@@ -49,8 +49,8 @@
 }
 
 .inputText {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   text-size-adjust: 10px;
   text-align: center;
   text-transform: uppercase;
@@ -58,37 +58,7 @@
   background-color: white;
 }
 
-#confirma {
-  margin-left: 10px;
-  height: 50px;
-  width: 50px;
-}
-
-#confirma2 {
-  margin-left: 10px;
-  height: 50px;
-  width: 50px;
-}
-
-#confirma3 {
-  margin-left: 10px;
-  height: 50px;
-  width: 50px;
-}
-
-#confirma4 {
-  margin-left: 10px;
-  height: 50px;
-  width: 50px;
-}
-
-#confirma5 {
-  margin-left: 10px;
-  height: 50px;
-  width: 50px;
-}
-
-#confirma6 {
+.confirmaClass {
   margin-left: 10px;
   height: 50px;
   width: 50px;
@@ -147,4 +117,27 @@
   width: 150px;
   border-radius: 10px;
   margin-top: 10px;
+}
+
+#testee {
+  display: flex;
+  justify-content: center;
+}
+
+#teclado {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linhaTeclado {
+  display: flex;
+}
+
+.tecla {
+  border: 1px black solid;
+  width: 50px;
+  height: 50px;
+  margin: 3PX;
 }
