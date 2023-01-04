@@ -262,3 +262,17 @@ botaoTeste5.addEventListener('click', linha5_1)
 
 botaoTeste6.addEventListener('click', linha6);
 botaoTeste6.addEventListener('click', linha6_1);
+
+const teclaQ = document.getElementById('teclaQ');
+
+const arrTecla = [t1, t2]
+
+function tete(arr) {
+  arr[0].value = 'q'
+}
+
+teclaQ.addEventListener('click', function() {
+  tete(arrTecla)
+})
+
+
