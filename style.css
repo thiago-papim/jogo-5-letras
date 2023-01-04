@@ -1,0 +1,94 @@
+#header {
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px black solid;
+  padding-bottom: 20px;
+}
+
+#primeiraLinha {
+  justify-content: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+#segundaLinha {
+  justify-content: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+#terceiraLinha {
+  justify-content: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+#quartaLinha {
+  justify-content: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+#quintaLinha {
+  justify-content: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+#sextaLinha {
+  justify-content: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+.quadradoTexto {
+  border: 1px solid rgb(0, 0, 0);
+  width: 50px;
+  height: 50px;
+}
+
+.inputText {
+  width: 50px;
+  height: 50px;
+  text-size-adjust: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 5px;
+  background-color: white;
+}
+
+#confirma {
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+#confirma2 {
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+#confirma3 {
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+#confirma4 {
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+#confirma5 {
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+#confirma6 {
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+}
