@@ -10,8 +10,8 @@ reset.addEventListener('click', function () {
 
 comoJogar.addEventListener('click', function () {
   if (mostrarInfo.style.display = 'none') {
-    mostrarInfo.style.display = 'block';
-    comoJogar.style.display = 'none';
+    mostrarInfo.style.display = 'flex';
+    
   }
 })
 

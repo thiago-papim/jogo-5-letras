@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <title>5 Letras</title>
 </head>
+
 <body>
   <header id="header">
-    <section>
-      <button id="info">Como Jogar</button>
-      <section id="comoJogar">
-        <p>Descubra a palavra em 6 tentativas <br>
-        A letra <b>L</b> faz parte da palavra e está na posição correta</p>
-        <div id="exemplo1">
-          <div class="exemplo" id="letraCerta"><p>L</p></div>
-          <div class="exemplo"></div>
-          <div class="exemplo"></div>
-          <div class="exemplo"></div>
-          <div class="exemplo"></div>
-        </div>
-        <p>A letra <b>V</b> faz parte da palavra, porém está na posição errada</p>
-          <div id="exemplo1">
-            <div class="exemplo"></div>
-            <div class="exemplo"></div>
-            <div class="exemplo" id="letraCerta2"><p>V</p></div>
-            <div class="exemplo"></div>
-            <div class="exemplo"></div>
-          </div>
-          <p>A Palavra pode possuir letras repetidas</p>
-          <button id="fechaMenu">Fechar Menu</button>
-        </section>
-    </section>
+    <button id="info" class="btn btn-dark dropdown-toggle">Como Jogar</button>
     <p id="logo">5 LETRAS</p>
-    <button id="buttonReset">Novo Jogo</button>
+    <button id="buttonReset" class="btn btn-dark">Novo Jogo</button>
   </header>
+  <section id="comoJogar">
+    <p>Descubra a palavra em 6 tentativas</p>
+    <p>A letra <b>L</b> faz parte da palavra e está na posição correta</p>
+    <div id="exemplo1">
+      <div class="exemplo" id="letraCerta"><p>L</p></div>
+      <div class="exemplo"></div>
+      <div class="exemplo"></div>
+      <div class="exemplo"></div>
+      <div class="exemplo"></div>
+    </div>
+    <p>A letra <b>V</b> faz parte da palavra, porém está na posição errada</p>
+      <div id="exemplo1">
+        <div class="exemplo"></div>
+        <div class="exemplo"></div>
+        <div class="exemplo" id="letraCerta2"><p>V</p></div>
+        <div class="exemplo"></div>
+        <div class="exemplo"></div>
+      </div>
+      <p>A Palavra pode possuir letras repetidas</p>
+      <button class="btn btn-dark" id="fechaMenu">FECHAR GUIA</button>
+    </section>
   <main>
     <section id="primeiraLinha" class="linha">
       <input type="text" maxlength="1" class="inputText" id="t1">
@@ -88,6 +89,9 @@
     </section>
   </main>
   <script src="script.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
